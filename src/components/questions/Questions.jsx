@@ -1,22 +1,16 @@
 import { useEffect, useState } from "react";
 import getRandomQuestions from "../../apiFunctions/getRandomQuestions";
+import React from "react";
 
-export function Questions() {
-
-    const [questions, setQuestions] = useState([]); //default value - an empty array
-
-    useEffect(() => {
-        getRandomQuestions().then((questions) => setQuestions(questions));
-    }, []); //empty dependecy array so that it will only run once
+export function Questions({questions, currentQuestionIndex}) {
 
     return (
-        <div>
-            Questions: 
-            {questions && questions.map((question) => (
-                <p key={question.id}>
-                    {question.question.text}
+        <div className="">
+            Question: 
+            {questions && questions[currentQuestionIndex] && (
+                <p key={questions[currentQuestionIndex].id}>
+                    {questions[currentQuestionIndex].question.text}
                 </p>
-                )
             )}
         </div>
     )

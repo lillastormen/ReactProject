@@ -7,13 +7,14 @@ function Quiz () {
 
 
     return (
-        <>
-        <CountdownBar />
-            <div className='w-full h-full flex justify-center items-center'>
+        
+            <div className='w-full h-full flex flex-col justify-center items-center'>
+                <CountdownBar />
                 <div className='text-sm font-mono'>QuizText</div>
+                <QuestionArea />
             </div>
-            <QuestionArea />
-        </>
+            
+        
     )
 }
 
