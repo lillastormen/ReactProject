@@ -20,20 +20,13 @@ function Result () {
             hover:from-blue-500 hover:to-purple-400 hover:scale-110 ease-in-out transition-all duration-100
             sm:w-3/5" 
             //on click needs to be an arrow function otherwise it triggers when it renders
-            onClick={() => navigate('/')}
-            >
-            <div className='text-xl font-mono flex justify-center items-center' >
-            
+            onClick={() => navigate('/')}>
+                <div className='text-xl font-mono flex justify-center items-center' >
                     <p>Start over</p>
-                
+                </div>
             </div>
-            </div>
-            
-        </>
-        
-        
+        </> 
     )
-
 }
 
 
