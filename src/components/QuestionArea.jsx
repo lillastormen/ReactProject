@@ -23,7 +23,6 @@ function QuestionArea () {
 
     useEffect(() => {
         if (questions.length && currentQuestionIndex >= questions.length - 1 ) {
-            console.log('asd');
             setCurrentQuestionIndex(0);
             navigate('/result');
         }
