@@ -5,7 +5,7 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Index from './views/index.jsx';
 import Quiz from './views/quiz.jsx';
-import Result from './views/quiz.jsx';
+import Result from './views/result.jsx';
 
 
 const ProjectRouter = () => {
