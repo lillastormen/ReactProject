@@ -39,7 +39,12 @@ function QuestionArea () {
             {(questions.length > 0 && questions[currentQuestionIndex]) && <Questions questions={questions} currentQuestionIndex={currentQuestionIndex}/>}
             <div className="w-full h-auto border-solid flex flex-col justify-items-center gap-y-7 gap-x-0
             md:grid md:grid-cols-2 sm:w-3/5 ">
-                {questions.length > 0 && <QuestionBox questions={questions} currentQuestionIndex={currentQuestionIndex} isCorrect={correctAnswerIndex === 0} incorrectAnswerIndex={incorrectAnswerIndices[0]} nextQuestion={() => setCurrentQuestionIndex(currentQuestionIndex+1)}/>}
+                {questions.length > 0 && <QuestionBox questions={questions} 
+                                        currentQuestionIndex={currentQuestionIndex} 
+                                        isCorrect={correctAnswerIndex === 0} 
+                                        incorrectAnswerIndex={incorrectAnswerIndices[0]} 
+                                        nextQuestion={() => 
+                                        setCurrentQuestionIndex(currentQuestionIndex+1)}/>}
             </div>
         </div>
     )
