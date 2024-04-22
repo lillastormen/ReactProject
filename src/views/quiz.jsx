@@ -3,6 +3,7 @@ import React from 'react';
 import QuestionArea from '../components/QuestionArea.jsx';
 import CountdownBar from '../components/CountdownBar.jsx';
 
+
 function Quiz () {
 
 
@@ -12,6 +13,7 @@ function Quiz () {
                 <CountdownBar />
                 <div className='text-sm font-mono'>QuizText</div>
                 <QuestionArea />
+
             </div>
             
         
