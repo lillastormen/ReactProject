@@ -17,7 +17,7 @@ function Result () {
     return (
         <> 
             <div className='w-full h-full flex justify-center items-center'>
-                <div className='text-sm font-mono'>resultPage</div> 
+                <div className='text-sm font-mono'>Yrgos fantastic React-made Quiz!</div> 
             </div>
         
             <div className='text-xl font-mono flex justify-center items-center'>

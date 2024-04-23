@@ -13,9 +13,6 @@ function CountdownBar ({ countdownKey }) {
     }, [countdownKey]);
 
 
-function CountdownBar () {
-
-
     return(
         <div  className='w-full flex justify-center mt-6'>
             <div className='w-4/5 h-4 bg-gray-400 rounded-xl'>
@@ -23,6 +20,7 @@ function CountdownBar () {
             </div>
         </div>
     );
+
 }
 
 export default CountdownBar;
