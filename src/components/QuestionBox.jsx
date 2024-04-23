@@ -49,24 +49,21 @@ function QuestionBox ({ questions, currentQuestionIndex, nextQuestion }) {
     return (
         <>
         {answers.map((answer, index) => (
-        <div key={index}
-        className={`w-9/10 h-auto py-5 rounded-xl bg-gradient-to-r from-purple-400 to-blue-500
-        hover:from-blue-500 hover:to-purple-400 hover:scale-110 ease-in-out transition-all duration-100
-        sm:w-3/5 
-        ${clicked && answer === correctAnswer ? 'border-green-500 border-8' : ''}
-        ${clicked && answer !== correctAnswer ? 'border-red-500 border-8' : ''}`}
-        onClick={() => checkAnswer(answer, correctAnswer)}>
+            <div key={index}
+            className={`w-9/10 h-auto py-5 rounded-xl bg-gradient-to-r from-purple-400 to-blue-500
+            hover:from-blue-500 hover:to-purple-400 hover:scale-110 ease-in-out transition-all duration-100
+            sm:w-3/5 
+            ${clicked && answer === correctAnswer ? 'border-green-500 border-8' : ''}
+            ${clicked && answer !== correctAnswer ? 'border-red-500 border-8' : ''}`}
+            onClick={() => checkAnswer(answer, correctAnswer)}>
 
-            <div className='text-xl font-mono flex justify-center items-center' >
-                <p >
-                    {answer}
-                </p>
+                <div className='text-xl font-mono flex justify-center items-center' >
+                    <p >
+                        {answer}
+                    </p>
+                </div>
             </div>
-        </div>
         ))}
-        {/* <div className='font-mono text-xl'>
-            Correct answers:{counter}
-        </div> */}
         </>
     )
 }

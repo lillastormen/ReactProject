@@ -52,8 +52,7 @@ function QuestionArea({ resetTimerBar }) {
         <div className='w-full flex flex-col justify-center items-center'>
             {questions.length > 0 && questions[currentQuestionIndex] && (
                 <Questions
-                    questions={questions}
-                    currentQuestionIndex={currentQuestionIndex}
+                    question={questions[currentQuestionIndex].question.text}
                 />
             )}
             <div className='w-full h-auto border-solid flex flex-col justify-items-center gap-y-7 gap-x-0 md:grid md:grid-cols-2 sm:w-3/5 '>
