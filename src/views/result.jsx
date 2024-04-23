@@ -1,6 +1,7 @@
 import '../App.css'
 import React from 'react';
 import { useNavigate} from 'react-router-dom';
+import Score from '../components/Score';
 
 
 function Result () {
@@ -16,6 +17,7 @@ function Result () {
 
     return (
         <> 
+        <Score/>
             <div className='w-full h-full flex justify-center items-center'>
                 <div className='text-sm font-mono'>Yrgos fantastic React-made Quiz!</div> 
             </div>
@@ -28,10 +30,7 @@ function Result () {
             hover:from-blue-500 hover:to-purple-400 hover:scale-110 ease-in-out transition-all duration-100
             sm:w-3/5" 
             //on click needs to be an arrow function otherwise it triggers when it renders
-            onClick={restartQuiz}
-            
-            >
-                
+            onClick={restartQuiz}>
                 <div className='text-xl font-mono flex justify-center items-center' >
                     <p>Start over</p>
                 </div>
