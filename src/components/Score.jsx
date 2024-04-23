@@ -29,8 +29,11 @@ function Score() {
         });
     }
 
-
-    writeUserData(sessionStorage.getItem('userName'), sessionStorage.getItem('result'));
+    useEffect(() => {
+        writeUserData(sessionStorage.getItem('userName'), sessionStorage.getItem('result'));
+        getUserData(1);
+    })
+    
 
     function getUserData(userId) {
         const dbRef = ref(getDatabase());
@@ -46,11 +49,14 @@ function Score() {
         });
     }
 
-    getUserData(1);
+   
 
     return (
-       <div>Score</div>
-    )
+    <div className="w-full h-auto py-5 rounded-xl bg-gradient-to-r from-purple-400 to-blue-500 mt-12
+    hover:from-blue-500 hover:to-purple-400 ease-in-out transition-all duration-100
+    sm:w-3/5">
+    <div className='text-xl font-mono flex justify-center items-center'>Score Table</div>
+    </div>)
 }
 
 export default Score;
