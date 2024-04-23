@@ -64,9 +64,9 @@ function QuestionBox ({ questions, currentQuestionIndex, nextQuestion }) {
             </div>
         </div>
         ))}
-        <div className='font-mono text-xl'>
+        {/* <div className='font-mono text-xl'>
             Correct answers:{counter}
-        </div>
+        </div> */}
         </>
     )
 }
