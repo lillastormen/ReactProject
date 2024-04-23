@@ -11,7 +11,6 @@ function Quiz () {
         
             <div className='w-full h-full flex flex-col justify-center items-center'>
                 <CountdownBar />
-                <div className='text-sm font-mono'>QuizText</div>
                 <QuestionArea />
 
             </div>
