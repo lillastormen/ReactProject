@@ -24,7 +24,8 @@ function Index () {
                         value={userName}
                         onChange={(e) => setUserName(e.target.value)}
                         placeholder="Enter your name"
-                        className="border border-gray-300 rounded-md px-3 py-1 mt-12"/>
+                        className="border border-gray-300 rounded-md px-3 py-1 mt-12"
+                    />
                 </div>
                 
                 <div className="w-full h-auto py-5 rounded-xl bg-gradient-to-r from-purple-400 to-blue-500 mt-12
@@ -32,7 +33,7 @@ function Index () {
                 sm:w-3/5" 
                 //on click needs to be an arrow function otherwise it triggers when it renders
                 onClick={startQuiz}>
-                    <div className='text-xl font-mono flex justify-center items-center'>
+                    <div className='text-xl font-mono flex justify-center items-center' >
                         <p>Start the quiz!</p>
                     </div>
                 </div>

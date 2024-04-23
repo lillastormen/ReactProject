@@ -17,26 +17,28 @@ function Result () {
 
 
     return (
-        <> 
-            <div className='w-full h-full flex flex-col justify-center items-center'>
+        <div className='w-full h-full flex flex-col justify-center items-center'>
                 <div className='text-sm font-mono'>Yrgos fantastic React-made Quiz!</div> 
           
-                <div className='pt-8 text-xl font-mono flex justify-center items-center'>
+        
+                <div className='pt-6 text-xl font-mono flex justify-center items-center'>
                     <p>{userName}, your total score is: {result}</p>
                 </div>
 
-                <div className="w-full h-auto py-5 rounded-xl bg-gradient-to-r from-purple-400 to-blue-500 mt-12
+                <Score />
+                
+                <div className="mt-6 mb-6 w-full h-auto py-5 rounded-xl bg-gradient-to-r from-purple-400 to-blue-500
                 hover:from-blue-500 hover:to-purple-400 hover:scale-110 ease-in-out transition-all duration-100
-                sm:w-3/5" 
+                sm:w-3/5 " 
                 //on click needs to be an arrow function otherwise it triggers when it renders
                 onClick={restartQuiz}>
-                    <div className='text-xl font-mono flex justify-center items-center'>
-                        <p>Start over</p>
-                    </div>
+                <div className='text-xl font-mono flex justify-center items-center' >
+                    <p>Start over</p>
                 </div>
             </div>
-        </> 
+        </div>
     )
+
 }
 
 
