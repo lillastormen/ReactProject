@@ -32,19 +32,19 @@ function QuestionBox ({ questions, currentQuestionIndex, nextQuestion }) {
 
     // Check if answer is correct answer and show correct answer + delay 3s
     const checkAnswer = (answer, correctAnswer) => {
-        setClicked(true);
-        if (answer == correctAnswer) {
-            const currentResult = sessionStorage.getItem('result');
-            const newResult = (currentResult) ? parseInt(currentResult) + 1 : 1;
-            sessionStorage.setItem('result', newResult);
-            console.log(currentResult);
-            setCounter(counter => counter + 1);
+        if(!clicked){
+            setClicked(true);
+            if (answer == correctAnswer) {
+                const currentResult = sessionStorage.getItem('result');
+                const newResult = (currentResult) ? parseInt(currentResult) + 1 : 1;
+                sessionStorage.setItem('result', newResult);
+                setCounter(counter => counter + 1);
+            }
+            setTimeout(() => {
+                nextQuestion();
+                setClicked(false);
+            }, 3000);
         }
-        
-        setTimeout(() => {
-            nextQuestion();
-            setClicked(false);
-        }, 3000);
     }
     return (
         <>

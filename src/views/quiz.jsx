@@ -21,7 +21,7 @@ function Quiz () {
         
             <div className='w-full h-full flex flex-col justify-center items-center'>
                 <CountdownBar key={countdownKey} />
-                <div className='text-sm font-mono'>QuizText</div>
+                <div className='text-sm font-mono'>Yrgos fantastic React-made Quiz!</div>
                 <QuestionArea resetTimerBar={resetTimerBar} />
 
             </div>
