@@ -1,6 +1,7 @@
 import '../App.css'
 import React from 'react';
 import { useNavigate} from 'react-router-dom';
+import Score from '../components/Score';
 
 
 function Result () {
@@ -12,6 +13,7 @@ function Result () {
         sessionStorage.clear();
         navigate('/');
     }
+
 
 
     return (
