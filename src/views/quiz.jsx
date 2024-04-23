@@ -8,7 +8,8 @@ import { useState, useEffect } from 'react';
 function Quiz () {
     const [countdownKey, setCountdownKey] = useState(0);
 
-    // This function should be called whenever a new question is fetched
+    // Function to reset the timer bar. It increments the countdownKey state, 
+    // which triggers a re-render of the timer bar component.
     const resetTimerBar = () => {
         setCountdownKey(prevKey => prevKey + 1);
     };

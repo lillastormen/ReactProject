@@ -9,7 +9,7 @@ function CountdownBar ({ countdownKey }) {
         const interval = setInterval(() => {
             setCountdown(prevCountdown => prevCountdown - 1); // Decrease countdown every second
         }, 1000);
-        return () => clearInterval(interval); // Clear interval on component unmount or countdownKey change
+        return () => clearInterval(interval); 
     }, [countdownKey]);
 
 

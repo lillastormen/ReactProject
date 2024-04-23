@@ -15,11 +15,11 @@ function QuestionBox ({ questions, currentQuestionIndex, nextQuestion }) {
     // Select the correct and three incorrect answers
     const [answers, setAnswers] = useState([correctAnswer, incorrectAnswers[0], incorrectAnswers[1], incorrectAnswers[2]]);
 
-    // Fisher-Yates shuffle algorithm for answers
+    // Get correct answers from correct question and index
     useEffect(() => {
         const correctAnswer = questions[currentQuestionIndex].correctAnswer;
         const incorrectAnswers = questions[currentQuestionIndex].incorrectAnswers;
-        let newAnswers = [correctAnswer, ...incorrectAnswers];
+        let newAnswers = [correctAnswer, ...incorrectAnswers]; // The new corrected answers
     
         // Fisher-Yates shuffle algorithm
         for (let i = newAnswers.length - 1; i > 0; i--) {
@@ -30,7 +30,7 @@ function QuestionBox ({ questions, currentQuestionIndex, nextQuestion }) {
         setAnswers(newAnswers);
     }, [currentQuestionIndex, questions]);
 
-    // Check if answer is correct answer and show correct answer + delay 3s
+    // Check if answer is correct answer and show correct answer + delay 2s
     const checkAnswer = (answer, correctAnswer) => {
         if(!clicked){
             setClicked(true);
@@ -53,7 +53,7 @@ function QuestionBox ({ questions, currentQuestionIndex, nextQuestion }) {
         className={`w-9/10 h-auto py-5 rounded-xl bg-gradient-to-r from-purple-400 to-blue-500
         hover:from-blue-500 hover:to-purple-400 hover:scale-110 ease-in-out transition-all duration-100
         sm:w-3/5 
-        ${clicked && answer === correctAnswer ? 'border-green-500 border-8' : ''}
+        ${clicked && answer === correctAnswer ? 'border-green-500 border-8' : ''} 
         ${clicked && answer !== correctAnswer ? 'border-red-500 border-8' : ''}`}
         onClick={() => checkAnswer(answer, correctAnswer)}>
 

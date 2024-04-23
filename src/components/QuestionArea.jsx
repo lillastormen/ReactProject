@@ -27,7 +27,8 @@ function QuestionArea({ resetTimerBar }) {
         resetTimerBar();
     }, [currentQuestionIndex, questions]);
 
-    const correctAnswerIndex = Math.floor(Math.random() * 4);
+    // Slumps an index for correct answer and fills array with the incorrect
+    const correctAnswerIndex = Math.floor(Math.random() * 4); 
     const incorrectAnswerIndices = [0, 1, 2, 3].filter(
         (index) => index !== correctAnswerIndex
     );
@@ -42,10 +43,10 @@ function QuestionArea({ resetTimerBar }) {
         resetTimerBar();
     };
 
-    
+    // Handle timeout after 15 seconds and the bar is filled
     useEffect(() => {
         const timeoutId = setTimeout(handleTimeout, 15000);
-        return () => clearTimeout(timeoutId); // Clear timeout 
+        return () => clearTimeout(timeoutId); 
     }, [currentQuestionIndex]);
 
     return (
