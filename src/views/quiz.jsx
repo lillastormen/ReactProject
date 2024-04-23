@@ -13,15 +13,11 @@ function Quiz () {
         setCountdownKey(prevKey => prevKey + 1);
     };
 
-    const resetQuestionAfterTime = () => {
-        
-    }
-
     return (
         
-            <div className='w-full h-full flex flex-col justify-center items-center'>
+            <div className='w-screen h-screen flex flex-col justify-around items-center'>
                 <CountdownBar key={countdownKey} />
-                <div className='text-sm font-mono'>Yrgos fantastic React-made Quiz!</div>
+                
                 <QuestionArea resetTimerBar={resetTimerBar} />
 
             </div>

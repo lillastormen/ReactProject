@@ -43,7 +43,7 @@ function QuestionBox ({ questions, currentQuestionIndex, nextQuestion }) {
             setTimeout(() => {
                 nextQuestion();
                 setClicked(false);
-            }, 3000);
+            }, 2000);
         }
     }
     return (

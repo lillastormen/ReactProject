@@ -44,12 +44,12 @@ function QuestionArea({ resetTimerBar }) {
 
     
     useEffect(() => {
-        const timeoutId = setTimeout(handleTimeout, 10000);
+        const timeoutId = setTimeout(handleTimeout, 15000);
         return () => clearTimeout(timeoutId); // Clear timeout 
     }, [currentQuestionIndex]);
 
     return (
-        <div className='w-full flex flex-col justify-center items-center'>
+        <div className='w-full h-full flex flex-col justify-around items-center text-center'>
             {questions.length > 0 && questions[currentQuestionIndex] && (
                 <Questions
                     questions={questions}

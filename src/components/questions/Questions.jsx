@@ -5,7 +5,7 @@ import React from "react";
 export function Questions({questions, currentQuestionIndex}) {
 
     return (
-        <div className='w-4/5 font-mono text-2xl mt-8 mb-8'>
+        <div className='w-4/5 font-mono text-3xl mt-8 mb-8'>
         
             {questions && questions[currentQuestionIndex] && (
                 <p key={questions[currentQuestionIndex].id}>
