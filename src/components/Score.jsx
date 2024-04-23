@@ -33,11 +33,11 @@ function Score() {
 
     useEffect(() => {
         writeUserData(sessionStorage.getItem('userName'), sessionStorage.getItem('result'));
-        getUserData(1);
+        getUserData();
     },[])
     
-
-    function getUserData(userId) {
+    //get data
+    function getUserData() {
         const dbRef = ref(getDatabase());
         get(child(dbRef, `users/`))
         .then((snapshot) => {
@@ -58,8 +58,11 @@ function Score() {
             sm:w-3/5">
                 <div className='text-xl font-mono flex justify-center items-center'>Score Table</div>
             </div>
-                { score && Object.keys(score).map(key => (<div className='pt-2 text-xl font-mono flex justify-center items-center'>{key} - {score[key].result}</div>)
-                    )
+                { score && Object.keys(score).map(name => (
+                <div key={name} className='pt-2 text-xl font-mono flex justify-center items-center'>
+                    {name} - {score[name].result}
+                </div>
+                ))
                 }
         </>
         )
