@@ -20,7 +20,8 @@ function CountdownBar ({ countdownKey }) {
             </div>
         </div>
     );
-
 }
 
+
 export default CountdownBar;
+
